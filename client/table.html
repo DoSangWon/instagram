@@ -1,0 +1,23 @@
+<template name="table">
+    <table class="table table-striped table-condensed table-bordered">
+        <thead>
+        <tr>
+            <!--<td>ID</td>-->
+            <td style="width: 10%">번호</td>
+            <td style="width: 50%;">제목</td>
+            <td style="width: 10%;">작성자</td>
+            <td style="width: 10%">작성일</td>
+        </tr>
+        </thead>
+        <tbody>
+        {{#each board}}
+            <tr>
+                <td>{{number}}</td>
+                <td>{{subject}}</td>
+                <td>{{user}}</td>
+                <td>{{date}}</td>
+            </tr>
+        {{/each}}
+        </tbody>
+    </table>
+</template>
