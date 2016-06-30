@@ -1,7 +1,7 @@
 Template.insertData.events(
     {
         // button이 클릭되면 우측 함수가 실행된다
-        "click #btnSend": function(evt, tmpl) {
+        "click #wt_btn": function(evt, tmpl) {
             evt.preventDefault();
             var user = Meteor.user();
             console.log(user);
