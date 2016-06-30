@@ -10,12 +10,14 @@
         </tr>
         </thead>
         <tbody>
+        {{#each boards}}
         <tr dataId="{{_id}}" data-toggle="modal" data-target="#myModal">
             <td>{{number}}</td>
             <td>{{inpTitle}}</td>
             <td>{{user}}</td>
             <td>{{create}}</td>
         </tr>
+        {{/each}}
         </tbody>
     </table>
 </template>
