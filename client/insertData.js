@@ -3,7 +3,7 @@ Template.insertData.events(
         // button이 클릭되면 우측 함수가 실행된다
         "click #inpwt_btn": function(evt, tmpl) {
             evt.preventDefault();
-            var user = Meteor.user();
+            var user = Meteor.user().emails[0].address;
 
             if(!user) {
                 return alert('로그인이 필요합니다');
@@ -13,13 +13,14 @@ Template.insertData.events(
             //var board = Session.get('selectedData');
             //board = Boards.number;
             //console.log(board);
-            console.log($(user).val());
+
+          
             //data를 input에서 꺼내서 디비에 저장한다
             var obj = {};
-            obj.number = 1;
+            
             obj.inpTitle = $('#inpTitle').val();
             obj.wt_textarea = $('#wt_textarea').val();
-            obj.user = $(user);
+            obj.user = user;
             obj.create = new Date();
             console.log(obj);
             var image = $('#inpFile').val();

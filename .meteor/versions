@@ -54,6 +54,7 @@ modules@0.6.4
 modules-runtime@0.6.4_1
 mongo@1.1.9_1
 mongo-id@1.0.5
+mongo-livedata@1.0.12
 npm-bcrypt@0.8.7
 npm-mongo@1.4.44_1
 observe-sequence@1.0.12
@@ -81,5 +82,6 @@ tracker@1.0.14
 ui@1.0.11
 underscore@1.0.9
 url@1.0.10
+useful:mongo-counter@0.1.0
 webapp@1.2.9_1
 webapp-hashing@1.0.9

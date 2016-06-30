@@ -23,3 +23,4 @@ ian:bootstrap-3
 ian:accounts-ui-bootstrap-3
 accounts-password
 session
+useful:mongo-counter
