@@ -15,12 +15,13 @@
                 <div class="modal-body">
                     <!--본문-->
                     <div id="targetModal">
-                        {{bodyText}}
+                        <img src = {{image}}><br>
+                        {{textarea}}
                     </div>
 
                     <hr/>
                     {{#each comments}}
-                        <div>{{comment}}</div>
+                        <div> {{users}} : {{comment}}</div>//코멘트 아이디 부분 고쳐야함
                     {{/each}}
                     <!--댓글 작성-->
                     <form class="form-inline">

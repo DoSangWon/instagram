@@ -8,10 +8,13 @@ Template.modal.events({
         console.log("btnComment clicked!");
         var comment = $('#inpComment').val();
         var board = Session.get('selectedData');
+        var user = Meteor.user().emails[0].address;
 
         var obj = {};
         obj.comment = comment;
-        obj.user = Meteor.user();
+        obj.user = user;
+
+        
         if (!board.hasOwnProperty('comments')) {
             board.comments = [];
         }
@@ -24,14 +27,27 @@ Template.modal.events({
 Template.modal.helpers({
     name: function() {
         var obj = Session.get('selectedData') || {};
-        return obj.inpName;
+        return obj.inpTitle;
     },
-    bodyText: function() {
+    textarea: function() {
         var obj = Session.get('selectedData') || {};
-        return obj.inpTextarea;
+        return obj.wt_textarea;
     },
     comments: function() {
         var obj = Session.get('selectedData') || {};
         return obj.comments;
+    },
+    image: function () {
+        var obj = Session.get('selectedData') || {};
+        return obj.image;
+    },
+    users: function () {
+        /*var obj = Session.get('selectedData') || {};
+        for(var i=0 ; i > $(Session.get('selectedData'))[0].length;i++) {
+            var user = $($(Session.get('selectedData'))[0].comments[i].user);
+        }
+            console.log(user);
+            return user;
+        */
     }
 });

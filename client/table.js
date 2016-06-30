@@ -10,8 +10,9 @@ Template.table.events(
     {
         "click tr": function(evt, tmpl) {
             Session.set('selectedData', this);
+            console.log($(Session.get('selectedData'))[0].comments[1].user);
             //console.log('tr clicked');
-            //console.log($(this)[0].inpTextarea);
+            //console.log($(this)[1].inpTitle);
             //$('#targetModal').text($(this)[0].inpTextarea);
             //$('#myModalLabel').text($(this)[0].inpName)
             ////console.log($(evt).find('tr').attr('dataId'));
