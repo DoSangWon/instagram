@@ -9,7 +9,7 @@ Template.table.helpers(
 Template.table.events(
     {
         "click trd": function(evt, tmpl) {
-            Session.set('selectedData', this);
+            //Session.set('selectedData', this);      ?????????????
             //console.log('tr clicked');
             //console.log($(this)[0].inpTextarea);
             //$('#targetModal').text($(this)[0].inpTextarea);

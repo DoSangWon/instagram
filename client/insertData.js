@@ -4,17 +4,25 @@ Template.insertData.events(
         "click #wt_btn": function(evt, tmpl) {
             evt.preventDefault();
             var user = Meteor.user();
-            console.log(user);
             if(!user) {
                 return alert('로그인이 필요합니다');
             }
-
-
-
+            //Session.set('selectedData', this);
+            //var board = Session.get('selectedData');
+            //board = Boards.number;
+            //console.log(board);
             //data를 input에서 꺼내서 디비에 저장한다
             var obj = {};
+            //if(!board.hasOwnProperty('number')){
+                obj.number = 3;
+            //}
+            //else{
+                //obj.number = number++;
+            //}
             obj.inpTitle = $('#inpTitle').val();
             obj.wt_textarea = $('#wt_textarea').val();
+            obj.user = user;
+            obj.create = new Date();
 
             var image = $('#inpFile').val();
 
@@ -26,7 +34,7 @@ Template.insertData.events(
                 fileReader.onload = function(file) {
                     console.log('callback');
                     obj.image = file.srcElement.result;
-
+console.log(obj)
                     Boards.insert(obj);
 
                     $('#inpTitle').val("");
