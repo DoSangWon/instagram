@@ -13,6 +13,7 @@ Template.modal.events({
         var obj = {};
         obj.comment = comment;
         obj.user = user;
+        obj.date = new Date().format("yyyy.MM.dd a/p hh:mm:ss")
 
         
         if (!board.hasOwnProperty('comments')) {
