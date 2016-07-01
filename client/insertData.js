@@ -35,7 +35,7 @@ Template.insertData.events(
             if(!user) {
                 return alert('로그인이 필요합니다');
             }
-
+            var number = Boards.find({}).count();
             //Session.set('selectedData', this);
             //var board = Session.get('selectedData');
             //board = Boards.number;
@@ -44,7 +44,7 @@ Template.insertData.events(
           
             //data를 input에서 꺼내서 디비에 저장한다
             var obj = {};
-            
+            obj.number = number+1;
             obj.inpTitle = $('#inpTitle').val();
             obj.wt_textarea = $('#wt_textarea').val();
             obj.user = user;

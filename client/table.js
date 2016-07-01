@@ -1,7 +1,7 @@
 Template.table.helpers(
     {
         boards: function() {
-            return Boards.find().fetch().sort({});
+            return Boards.find({},{sort:{number: -1}}).fetch();
         }
     }
 );
