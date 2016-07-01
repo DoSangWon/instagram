@@ -22,7 +22,7 @@ Template.insertData.events(
             obj.wt_textarea = $('#wt_textarea').val();
             obj.user = user;
             obj.create = new Date();
-            console.log(obj);
+            console.log(obj.create);
             var image = $('#inpFile').val();
 
             if(image.length > 0) {

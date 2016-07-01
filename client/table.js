@@ -10,7 +10,8 @@ Template.table.events(
     {
         "click tr": function(evt, tmpl) {
             Session.set('selectedData', this);
-            console.log($(Session.get('selectedData'))[0].comments[1].user);
+            //Session.set('comments',this.comments);
+            //console.log($(Session.get('selectedData'))[0].comments[1].user);
             //console.log('tr clicked');
             //console.log($(this)[1].inpTitle);
             //$('#targetModal').text($(this)[0].inpTextarea);

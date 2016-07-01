@@ -8,7 +8,7 @@ Template.modal.events({
         console.log("btnComment clicked!");
         var comment = $('#inpComment').val();
         var board = Session.get('selectedData');
-        var user = Meteor.user().emails[0].address;
+        var user = Meteor.user().emails[0].address;//현재 코멘트 다는 사람의 ID
 
         var obj = {};
         obj.comment = comment;
@@ -40,14 +40,6 @@ Template.modal.helpers({
     image: function () {
         var obj = Session.get('selectedData') || {};
         return obj.image;
-    },
-    users: function () {
-        /*var obj = Session.get('selectedData') || {};
-        for(var i=0 ; i > $(Session.get('selectedData'))[0].length;i++) {
-            var user = $($(Session.get('selectedData'))[0].comments[i].user);
-        }
-            console.log(user);
-            return user;
-        */
     }
+
 });
