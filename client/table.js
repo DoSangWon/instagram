@@ -10,6 +10,11 @@ Template.table.events(
     {
         "click tr": function(evt, tmpl) {
             Session.set('selectedData', this);
+            var obj = Session.get('selectedData') || {};
+            var counter = obj.count + 1;
+            var _id = this._id
+            //Boards.update({_id:_id},{$set:{count:5}});
+            Boards.update( { _id: _id }, { $set: { count: counter } } );
             
 
             //Session.set('comments',this.comments);

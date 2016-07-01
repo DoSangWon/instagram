@@ -36,6 +36,7 @@ Template.insertData.events(
                 return alert('로그인이 필요합니다');
             }
             var number = Boards.find({}).count();
+            var count = 0;
             //Session.set('selectedData', this);
             //var board = Session.get('selectedData');
             //board = Boards.number;
@@ -49,6 +50,7 @@ Template.insertData.events(
             obj.wt_textarea = $('#wt_textarea').val();
             obj.user = user;
             obj.create = new Date().format("yyyy-MM-dd");
+            obj.count = count;
             console.log(obj.create);
             var image = $('#inpFile').val();
 
