@@ -10,6 +10,8 @@ Template.table.events(
     {
         "click tr": function(evt, tmpl) {
             Session.set('selectedData', this);
+            
+
             //Session.set('comments',this.comments);
             //console.log($(Session.get('selectedData'))[0].comments[1].user);
             //console.log('tr clicked');

@@ -15,13 +15,13 @@
                 <div class="modal-body">
                     <!--본문-->
                     <div id="targetModal">
-                        <img src = {{image}}><br>
+                        <img src = "{{image}}" style="width: 100%; height: 100%" ><br>
                         {{textarea}}
                     </div>
 
                     <hr/>
                     {{#each comments}}
-                        <div> {{user}} : {{comment}}  {{date}}</div>
+                        <div> {{user}} : {{comment}} [{{date}}]</div>
                     {{/each}}
                     <!--댓글 작성-->
                     <form class="form-inline">

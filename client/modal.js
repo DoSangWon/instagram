@@ -21,7 +21,7 @@ Template.modal.events({
         }
         board.comments.push(obj);
         Boards.update({_id: board._id}, board);
-
+        $('#inpComment').val("");
     }
 });
 
